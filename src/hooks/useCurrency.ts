@@ -9,7 +9,8 @@ export function useCurrency() {
   );
   const [selectedCurrency, setSelectedCurrency] = useState("");
   useEffect(() => {
-    fetch(checkEnvironment().concat("/api/dolar-today"), {
+    const base_url = checkEnvironment() || "";
+    fetch(base_url.concat("/api/dolar-today"), {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
