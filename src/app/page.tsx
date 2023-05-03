@@ -12,7 +12,7 @@ export default function Home() {
     tasasSelectedCurrency,
   } = useCurrency();
 
-  const handlechange = (e) => {
+  const handlechange = (e: any) => {
     e.preventDefault();
     setChange(e.target.value);
   };
