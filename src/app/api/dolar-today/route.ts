@@ -32,7 +32,7 @@ const CurrencyMap = (dataObject: DolarToday) => {
 
 export async function GET(request: Request) {
   const fetchData = await fetch(
-    "https://s3.amazonaws.com/dolartoday/data.json",{ next: { revalidate: 60*60*6 } }
+    "https://s3.amazonaws.com/dolartoday/data.json",{ next: { revalidate: 21600 } }
   );
   const data = await fetchData.json();
   const Currencies = CurrencyMap(data);
