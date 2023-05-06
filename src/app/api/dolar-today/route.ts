@@ -32,7 +32,7 @@ const CurrencyMap = (dataObject: DolarToday) => {
 
 export async function GET(request: Request) {
   const fetchData = await fetch(
-    "https://s3.amazonaws.com/dolartoday/data.json",{ cache: 'no-store' } }
+    "https://s3.amazonaws.com/dolartoday/data.json", { cache: 'no-store' } 
   );
   const data = await fetchData.json();
   const Currencies = CurrencyMap(data);
